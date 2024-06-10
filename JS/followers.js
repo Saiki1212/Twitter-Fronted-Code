@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('loginStatus') !== 'true') {
-        window.location.href = 'Log-sign.html';
+        window.location.href = 'index.html';
     } 
     const username = localStorage.getItem('username');
     fetch('https://twitter-backend-code-production.up.railway.app/AllFollowersList', {

@@ -1,7 +1,7 @@
 // Redirect to login if not logged in
 window.addEventListener('load', () => {
     if (localStorage.getItem('loginStatus') !== 'true') {
-        window.location.href = 'Log-sign.html';
+        window.location.href = 'index.html';
     } 
     localStorage.removeItem('viewedUsername');
 });

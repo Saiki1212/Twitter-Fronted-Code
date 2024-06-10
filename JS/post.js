@@ -2,7 +2,7 @@ document.getElementById('logoutButton').addEventListener('click', () => {
     if (confirm('Are you sure you want to log out?')) {
         localStorage.removeItem('loginStatus');
         localStorage.removeItem('username'); // Clear the username
-        window.location.href = 'Log-sign.html';
+        window.location.href = 'index.html';
     } 
 });
 

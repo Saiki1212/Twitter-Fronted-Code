@@ -62,12 +62,6 @@ function loadPage(page) {
         case 'user':
             window.location.href = 'user.html';
             break;
-        case 'deleteAccount':
-            html = `<h1>Delete Account</h1><p>Account deletion option.</p>`;
-            break;
-        default:
-            html = `<h1>Welcome</h1><p>Select an option from the left sidebar.</p>`;
-            break;
     }
     content.innerHTML = html;
 }
@@ -78,7 +72,7 @@ document.getElementById('logoutButton').addEventListener('click', () => {
         localStorage.removeItem('loginStatus');
         localStorage.removeItem('username'); 
         localStorage.removeItem('viewedUsername'); 
-        window.location.href = 'Log-sign.html';
+        window.location.href = 'index.html';
     }
     else {
         window.location.href = 'Home.html';
@@ -205,7 +199,7 @@ async function handleTweet(postId) {
 // Redirect to login if not logged in
 window.addEventListener('load', () => {
     if (localStorage.getItem('loginStatus') !== 'true') {
-        window.location.href = 'Log-sign.html';
+        window.location.href = 'index.html';
     } else {
         fetchPosts();
     }

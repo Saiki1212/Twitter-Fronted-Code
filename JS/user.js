@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('loginStatus') !== 'true') {
-        window.location.href = 'Log-sign.html';
+        window.location.href = 'index.html';
         return;
     }
 
@@ -294,7 +294,7 @@ async function handleDeleteUser() {
             console.log("s1");
             alert('User deleted successfully');
             localStorage.clear();
-            window.location.href = 'Log-sign.html';
+            window.location.href = 'index.html';
         } else {
             console.log("s1");
             alert('Failed to delete user');

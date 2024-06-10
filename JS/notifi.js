@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const username = localStorage.getItem('username'); // Get username from localStorage
 
     if (!username) {
-        window.location.href = 'Log-sign.html'; // Redirect to login page if not logged in
+        window.location.href = 'index.html'; // Redirect to login page if not logged in
         return;
     }
     if (localStorage.getItem('loginStatus') !== 'true') {
-        window.location.href = 'Log-sign.html';
+        window.location.href = 'index.html';
     } 
 
     fetchNotifications(username);
