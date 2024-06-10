@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+    <link rel="stylesheet" href="../CSS/user.css">
+</head>
+<body>
+    <div id="loadingSpinner" class="loader"></div>
+    <div class="container">
+        <div class="header">
+            <img id="profilePic" alt="Profile Picture">
+            <div class="user-info">
+                <h2 id="name"></h2>
+                <h2 id="username"></h2>
+                <p id="email"></p>
+                <div class="ownClass">
+                    <p>Followers: <span id="followers"></span></p>
+                    <p>Following: <span id="following"></span></p>
+                    <p>Posts: <span id="posts"></span></p>
+                </div>
+            </div>
+            <button id="editProfileBtn" class="btn-primary">Edit Profile</button>
+            <button id="deleteUserBtn" class="btn-danger">Delete User</button>
+        </div>
+        <div class="posts-section">
+            <h3>Posts</h3>
+            <div id="postsContainer"></div>
+        </div>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div id="editProfileModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Profile</h2>
+            <form id="editProfileForm">
+                <label for="editName">Name:</label>
+                <input type="text" id="editName" name="name">
+                <label for="editEmail">Email:</label>
+                <input type="email" id="editEmail" name="email">
+                <label for="editPassword">Password:</label>
+                <input type="password" id="editPassword" name="password">
+                <label for="editProfilePic">Profile Picture:</label>
+                <input type="file" id="editProfilePic" name="profilePic" accept="image/*">
+                <button type="submit" class="btn-primary">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete User Confirmation Modal -->
+    <div id="deleteUserModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Confirm Deletion</h2>
+            <p>Are you sure you want to delete your data from the database?</p>
+            <p>This is an irreversible process where you will lose your posts, tweets, likes, and all details!</p>
+            <button id="confirmDeleteBtn" class="btn-danger">Delete</button>
+            <button id="cancelDeleteBtn" class="btn-secondary">Cancel</button>
+        </div>
+    </div>
+
+    <script src="../JS/user.js"></script>
+    <script src="https://unpkg.com/image-compressor.js/dist/image-compressor.min.js"></script>
+</body>
+</html>

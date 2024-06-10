@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <link rel="stylesheet" href="../CSS/post.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="Home.html" data-page="home">Home</a></li>
+                <li><a href="followers.html" data-page="followers">Followers</a></li>
+                <li><a href="following.html" data-page="following">Following</a></li>
+                <li><a href="allusers.html" data-page="allusers">Make Friends</a></li>
+                <li><a href="tweet.html" data-page="tweets">Tweets</a></li>
+                <li><a href="Post.html" data-page="posts">Post</a></li>
+                <li><a href="notifi.html" data-page="notification">Notification's</a></li>
+                <li><a href="user.html" data-page="user">User</a></li>
+            </ul>
+            <div class="bottom-buttons">
+                <ul>
+                    <li><a id="logoutButton" class="red-button">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main class="content">
+            <h1>Create a New Post</h1>
+            <form id="postForm">
+                <textarea id="postContent" placeholder="What's on your mind?" required></textarea>
+                <input type="file" id="postImage" name="postImage" accept="image/*">
+                <button type="submit">Post</button>
+            </form>
+            <div id="recentPosts">
+                <h2>Recent Posts</h2>
+                <div id="postsContainer"></div>
+            </div>
+        </main>
+        
+    </div>
+    <script src="../JS/post.js"></script>
+    <script src="https://unpkg.com/image-compressor.js/dist/image-compressor.min.js"></script>
+</body>
+</html>

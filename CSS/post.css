@@ -1,0 +1,148 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: rgb(23, 135, 235);
+    color: white;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover, .sidebar ul li a.active {
+    background-color: #575757;
+    border-radius: 4px;
+    padding: 8px 15px;
+}
+
+.content {
+    margin-left: 200px;
+    padding: 20px;
+    width: 100%;
+}
+
+h1, p {
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(23, 135, 235);
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1e7ac7;
+}
+
+#recentPosts {
+    margin-top: 20px;
+}
+
+.post {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.post time {
+    display: block;
+    color: #888;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.post .post-image {
+    margin-top: 10px;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.bottom-buttons ul {
+    list-style: none;
+    margin-bottom: 50px;
+}
+
+.bottom-buttons ul li {
+    padding: 15px 20px;
+}
+
+.bottom-buttons ul li a {
+    color: #e0182c;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.bottom-buttons ul li a:hover {
+    background-color: #dc3545;
+    border-radius: 4px;
+    padding: 8px 15px;
+    color: #eeeeee;
+}
+
+.red-button {
+    color: #0056b3;
+}
+
+.post-image {
+    height: 400px;
+    width: 400px;
+}
+

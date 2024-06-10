@@ -1,0 +1,73 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f6f5f7;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(23, 135, 235);
+}
+
+.tweet {
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tweet-header {
+    display: flex;
+    align-items: center;
+}
+
+.tweet-header img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.tweet-header .username {
+    font-weight: bold;
+    color: #555;
+}
+
+.tweet-content {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.tweet-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.tweet-actions button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: rgb(23, 135, 235);
+    color: #fff;
+    font-size: 14px;
+}
+
+.tweet-actions button:hover {
+    background-color: #1b82d6;
+}

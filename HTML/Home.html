@@ -1,0 +1,43 @@
+<!-- Home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../CSS/home.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#" data-page="home">Home</a></li>
+                <li><a href="#" data-page="followers">Followers</a></li>
+                <li><a href="#" data-page="following">Following</a></li>
+                <li><a href="#" data-page="allusers">Make Friends</a></li>
+                <li><a href="#" data-page="tweets">Tweets</a></li>
+                <li><a href="#" data-page="posts">Post</a></li>
+                <li><a href="#" data-page="notification">Notification's</a></li>
+                <li><a href="#" data-page="user">User</a></li>
+            </ul>
+            <div class="bottom-buttons">
+                <ul>
+                    <li><a id="logoutButton" class="red-button">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main class="content" id="content">
+            <h1>All Posts...</h1>
+            <div id="postsContainer"></div>
+        </main>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <img id="modalImage" src="" alt="Post Image">
+              <p id="modalContent"></p>
+            </div>
+          </div>
+    </div>
+    <script src="../JS/home.js"></script>
+</body>
+</html>

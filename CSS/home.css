@@ -1,0 +1,196 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color:rgb(23, 135, 235);
+    color: white;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover, .sidebar ul li a.active {
+    background-color: #575757;
+    border-radius: 4px;
+    padding: 8px 15px 8px 0px;
+}
+
+.content {
+    margin-left: 200px;
+    padding: 20px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#postsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.post:hover {
+    transform: scale(1.02);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-header img.profile-pic {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.post-header .username {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.post-content {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-actions button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.post-actions button:hover {
+    background-color: #0056b3;
+}
+
+.post-actions .like-count, .post-actions .tweet-count {
+    font-size: 14px;
+    color: #777;
+}
+
+.bottom-buttons ul {
+    list-style: none;
+    /* padding: 8px 15px 8px 15px; */
+    margin-bottom: 50px;
+}
+
+.bottom-buttons ul li {
+    padding: 15px 20px;
+}
+
+.bottom-buttons ul li a {
+    color: #e0182c;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.bottom-buttons ul li a:hover {
+    background-color: #dc3545;
+    border-radius: 4px;
+    padding: 8px 15px 8px 15px;
+    color: #eeeeee;
+}
+
+.red-button {
+    color: #0056b3;
+}
+
+.timestamp {
+    margin-top: 10px;
+    font-size: 1.4ch;
+}
+
+/* CSS for the modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  

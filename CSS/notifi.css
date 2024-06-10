@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.notification {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    position: relative;
+}
+
+.notification .message {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.notification .timestamp {
+    font-size: 12px;
+    color: #999;
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+}
+
+.notification.request {
+    background: #eaf7ff;
+}
