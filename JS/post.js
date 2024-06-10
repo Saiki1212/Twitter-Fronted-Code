@@ -29,7 +29,7 @@ document.getElementById('postForm').addEventListener('submit', async (e) => {
         postImageBase64 = await compressAndConvertBase64(file);
     }
     
-    const response = await fetch('http://localhost:8000/post', {
+    const response = await fetch('https://twitter-backend-code-production.up.railway.app/post', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

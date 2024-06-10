@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function fetchTweets() {
     const username = localStorage.getItem('username');
-    const response = await fetch('http://localhost:8000/AllTweetsOfPosts', {
+    const response = await fetch('https://twitter-backend-code-production.up.railway.app/AllTweetsOfPosts', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ async function handleDelete(e) {
     const tweetContent = e.target.getAttribute('data-tweet');
     const username = localStorage.getItem('username');
 
-    const response = await fetch('http://localhost:8000/tweetToDelete', {
+    const response = await fetch('https://twitter-backend-code-production.up.railway.app/tweetToDelete', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -104,7 +104,7 @@ function handleEdit(e) {
 }
 
 async function updateTweet({ tweetId, username, tweetContent }) {
-    const response = await fetch('http://localhost:8000/tweetToEdit', {
+    const response = await fetch('https://twitter-backend-code-production.up.railway.app/tweetToEdit', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

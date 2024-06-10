@@ -90,7 +90,7 @@ const postsContainer = document.getElementById('postsContainer');
 // Fetch and display posts on page load
 async function fetchPosts() {
     const username = localStorage.getItem('username'); // Get username from localStorage
-    const response = await fetch(`http://localhost:8000/AllpostsExceptCurrentUser`, {
+    const response = await fetch(`https://twitter-backend-code-production.up.railway.app/AllpostsExceptCurrentUser`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -164,7 +164,7 @@ function timeAgo(date) {
 async function handleLike(postId) {
     const username = localStorage.getItem('username');
 
-    const response = await fetch('http://localhost:8000/likeForAPost', {
+    const response = await fetch('https://twitter-backend-code-production.up.railway.app/likeForAPost', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -186,7 +186,7 @@ async function handleTweet(postId) {
     const tweetContent = prompt('Enter your tweet:');
     if (!tweetContent) return;
 
-    const response = await fetch('http://localhost:8000/tweetToAPost', {
+    const response = await fetch('https://twitter-backend-code-production.up.railway.app/tweetToAPost', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

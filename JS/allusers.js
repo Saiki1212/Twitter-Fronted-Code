@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const usersContainer = document.getElementById('usersContainer');
 
     const username = localStorage.getItem('username'); // Replace this with the actual logged-in username
-    const response = await fetch('http://localhost:8000/AllUsers', {
+    const response = await fetch('https://twitter-backend-code-production.up.railway.app/AllUsers', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const followButton = document.createElement('button');
         followButton.textContent = 'Follow';
         followButton.addEventListener('click', async () => {
-            const response = await fetch('http://localhost:8000/FollowUser', {
+            const response = await fetch('https://twitter-backend-code-production.up.railway.app/FollowUser', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

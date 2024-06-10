@@ -16,7 +16,7 @@ loginForm.addEventListener('submit', async (e) => {
     const username = document.getElementById('loginUsername').value;
     const password = document.getElementById('loginPassword').value;
 
-    const response = await fetch('http://localhost:8000/login', {
+    const response = await fetch('https://twitter-backend-code-production.up.railway.app/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ signupForm.addEventListener('submit', async (e) => {
     const username = document.getElementById('signupUsername').value;
     const password = document.getElementById('signupPassword').value;
 
-    const response = await fetch('http://localhost:8000/register', {
+    const response = await fetch('https://twitter-backend-code-production.up.railway.app/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'Log-sign.html';
     } 
     const username = localStorage.getItem('username');
-    fetch('http://localhost:8000/AllFollowersList', {
+    fetch('https://twitter-backend-code-production.up.railway.app/AllFollowersList', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ function toggleFollow(followerUsername, isFollowing) {
     console.log(1)
     const username = localStorage.getItem('username');
     console.log("username : ", username, "followerUsername : ", followerUsername);
-    fetch(`http://localhost:8000/${isFollowing ? 'UnFollowUser' : 'FollowUser'}`, {
+    fetch(`https://twitter-backend-code-production.up.railway.app/${isFollowing ? 'UnFollowUser' : 'FollowUser'}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

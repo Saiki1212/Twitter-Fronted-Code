@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function fetchUserPosts(username, loggedInUsername) {
     try {
-        const response = await fetch('http://localhost:8000/userPosts', {
+        const response = await fetch('https://twitter-backend-code-production.up.railway.app/userPosts', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -168,7 +168,7 @@ async function updateUserProfile(name, email, password, profilePicBase64) {
     loadingSpinner.style.display = 'block';
 
     try {
-        const response = await fetch('http://localhost:8000/editUserDetails', {
+        const response = await fetch('https://twitter-backend-code-production.up.railway.app/editUserDetails', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -233,7 +233,7 @@ async function compressAndConvertBase64(profilePicBase64) {
 function editPost(postId, currentContent) {
     const newContent = prompt('Edit your post:', currentContent);
     if (newContent && newContent !== currentContent) {
-        fetch('http://localhost:8000/editPost', {
+        fetch('https://twitter-backend-code-production.up.railway.app/editPost', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -255,7 +255,7 @@ function editPost(postId, currentContent) {
 
 function deletePost(postId) {
     if (confirm('Are you sure you want to delete this post?')) {
-        fetch('http://localhost:8000/deletePost', {
+        fetch('https://twitter-backend-code-production.up.railway.app/deletePost', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -281,7 +281,7 @@ async function handleDeleteUser() {
     loadingSpinner.style.display = 'block';
 
     try {
-        const response = await fetch('http://localhost:8000/deleteUserFromDB', {
+        const response = await fetch('https://twitter-backend-code-production.up.railway.app/deleteUserFromDB', {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

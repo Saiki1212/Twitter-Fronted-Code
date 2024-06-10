@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function fetchNotifications(username) {
     try {
-        const response = await fetch(`http://localhost:8000/userNotifications`, {
+        const response = await fetch(`https://twitter-backend-code-production.up.railway.app/userNotifications`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
